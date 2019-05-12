@@ -1,3 +1,4 @@
+# use sudo time bash ./mycfg.sh
 echo "#1 apt update ##################################################################"
 sudo apt update -y
 
