@@ -11,6 +11,11 @@ sudo python3 -m pip uninstall pip && sudo apt install python3-pip --reinstall -y
 echo "#4 install jupyter ##################################################################"
 sudo apt install jupyter-notebook -y
 
+mkdir workspace
+cd workspace
+mkdir python
+cd python
+
 echo "#1 show version: screenfetch ******************************************************************"
 screenfetch
 echo "#2 show version: pip3 ******************************************************************"
