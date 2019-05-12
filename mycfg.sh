@@ -22,4 +22,5 @@ jupyter --version
 echo "#5 show version: jupyter notebook ******************************************************************"
 jupyter-notebook --version
 
+echo "DONE!!! @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
 #TODO: notebook themes, jupyter lab
