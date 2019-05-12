@@ -1,4 +1,9 @@
 # use sudo time bash ./mycfg.sh
+
+echo "#0 add local to PATH ##################################################################"
+export PATH=$PATH:~/.local/bin
+
+
 echo "#1 apt update ##################################################################"
 sudo apt update -y
 
@@ -10,8 +15,10 @@ echo "#3 reinstall and update python3 and pip ##################################
 sudo apt install python3-pip --reinstall -y
 
 echo "#4 install jupyter ##################################################################"
+python3 -m pip install jupyter
 # sudo apt install jupyter-notebook -y
-pip3 install jupyter-notebook
+# pip3 install jupyter-notebook
+# pip3 install jupyter
 
 # cd ..
 # mkdir workspace
@@ -19,16 +26,20 @@ pip3 install jupyter-notebook
 # mkdir python
 # cd python
 
-echo "#1 show version: screenfetch ******************************************************************"
+echo "#1 show version: screenfetch ****************************************"
 screenfetch
-echo "#2 show version: pip3 ******************************************************************"
+echo "#2 show version: pip3 ****************************************"
 pip3 --version
-echo "#3 show version: python3 ******************************************************************"
+echo "#3 show version: python3 ****************************************"
 python3 -V
-echo "#4 show version: jupyter core ******************************************************************"
+echo "#4 show version: jupyter core ****************************************"
 jupyter --version
-echo "#5 show version: jupyter notebook ******************************************************************"
+echo "#5 show version: jupyter notebook ****************************************"
 jupyter-notebook --version
 
 echo "DONE!!! @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
 #TODO: notebook themes, jupyter lab
+
+
+# sudo apt-get install sl
+# sl -e
