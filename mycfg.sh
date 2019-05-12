@@ -1,21 +1,23 @@
 # use sudo time bash ./mycfg.sh
 
-echo "#0 add local to PATH ##################################################################"
+echo "#1 add local to PATH ##################################################################"
 export PATH=$PATH:~/.local/bin
 
-
-echo "#1 apt update ##################################################################"
+echo "#2 apt update ##################################################################"
 sudo apt update -y
 
-echo "#2 install screenfetch ##################################################################"
+echo "#3 install screenfetch ##################################################################"
 sudo apt install screenfetch -y
 
-echo "#3 reinstall and update python3 and pip ##################################################################"
+echo "#4 reinstall and update python3 and pip ##################################################################"
 # sudo python3 -m pip uninstall pip
 sudo apt install python3-pip --reinstall -y
 
-echo "#4 install jupyter ##################################################################"
+echo "#5 install jupyter ##################################################################"
 python3 -m pip install jupyter
+
+echo "#6 install sl ##################################################################"
+sudo apt-get install sl
 
 echo "#1 show version: screenfetch ****************************************"
 screenfetch
@@ -28,8 +30,8 @@ jupyter --version
 echo "#5 show version: jupyter notebook ****************************************"
 jupyter-notebook --version
 
+echo "#6 but trains are awesome @@@@@@@@@@@@@@@@@"
+sl -e
+
 echo "DONE!!! @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
 #TODO: notebook themes, jupyter lab
-
-sudo apt-get install sl
-sl -e
