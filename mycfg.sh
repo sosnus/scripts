@@ -16,15 +16,6 @@ sudo apt install python3-pip --reinstall -y
 
 echo "#4 install jupyter ##################################################################"
 python3 -m pip install jupyter
-# sudo apt install jupyter-notebook -y
-# pip3 install jupyter-notebook
-# pip3 install jupyter
-
-# cd ..
-# mkdir workspace
-# cd workspace
-# mkdir python
-# cd python
 
 echo "#1 show version: screenfetch ****************************************"
 screenfetch
@@ -40,6 +31,5 @@ jupyter-notebook --version
 echo "DONE!!! @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
 #TODO: notebook themes, jupyter lab
 
-
-# sudo apt-get install sl
-# sl -e
+sudo apt-get install sl
+sl -e
