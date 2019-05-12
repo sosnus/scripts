@@ -6,17 +6,18 @@ echo "#2 install screenfetch ###################################################
 sudo apt install screenfetch -y
 
 echo "#3 reinstall and update python3 and pip ##################################################################"
-sudo python3 -m pip uninstall pip
+# sudo python3 -m pip uninstall pip
 sudo apt install python3-pip --reinstall -y
 
 echo "#4 install jupyter ##################################################################"
-sudo apt install jupyter-notebook -y
+# sudo apt install jupyter-notebook -y
+pip3 install jupyter-notebook
 
-cd ..
-mkdir workspace
-cd workspace
-mkdir python
-cd python
+# cd ..
+# mkdir workspace
+# cd workspace
+# mkdir python
+# cd python
 
 echo "#1 show version: screenfetch ******************************************************************"
 screenfetch
