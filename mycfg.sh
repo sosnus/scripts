@@ -11,6 +11,7 @@ sudo python3 -m pip uninstall pip && sudo apt install python3-pip --reinstall -y
 echo "#4 install jupyter ##################################################################"
 sudo apt install jupyter-notebook -y
 
+cd ..
 mkdir workspace
 cd workspace
 mkdir python
