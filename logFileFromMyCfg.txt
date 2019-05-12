@@ -1,81 +1,0 @@
-#1 apt update ##################################################################
-
-WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
-
-Get:1 http://security.ubuntu.com/ubuntu bionic-security InRelease [88.7 kB]
-Hit:2 http://archive.ubuntu.com/ubuntu bionic InRelease
-Get:3 http://archive.ubuntu.com/ubuntu bionic-updates InRelease [88.7 kB]
-Get:4 http://archive.ubuntu.com/ubuntu bionic-backports InRelease [74.6 kB]
-Fetched 252 kB in 8s (30.4 kB/s)
-Reading package lists...
-Building dependency tree...
-Reading state information...
-177 packages can be upgraded. Run 'apt list --upgradable' to see them.
-#2 install screenfetch ##################################################################
-
-WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
-
-Reading package lists...
-Building dependency tree...
-Reading state information...
-screenfetch is already the newest version (3.8.0-8).
-0 upgraded, 0 newly installed, 0 to remove and 177 not upgraded.
-#3 reinstall and update python3 and pip ##################################################################
-The directory '/home/sosnus1804/.cache/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
-Not uninstalling pip at /usr/lib/python3/dist-packages, outside environment /usr
-
-WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
-
-Reading package lists...
-Building dependency tree...
-Reading state information...
-0 upgraded, 0 newly installed, 1 reinstalled, 0 to remove and 177 not upgraded.
-Need to get 114 kB of archives.
-After this operation, 0 B of additional disk space will be used.
-Get:1 http://archive.ubuntu.com/ubuntu bionic-updates/universe amd64 python3-pip all 9.0.1-2.3~ubuntu1 [114 kB]
-Fetched 114 kB in 6s (19.8 kB/s)
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 42687 files and directories currently installed.)
-Preparing to unpack .../python3-pip_9.0.1-2.3~ubuntu1_all.deb ...
-Unpacking python3-pip (9.0.1-2.3~ubuntu1) over (9.0.1-2.3~ubuntu1) ...
-Setting up python3-pip (9.0.1-2.3~ubuntu1) ...
-Processing triggers for man-db (2.8.3-2) ...
-#4 install jupyter ##################################################################
-
-WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
-
-Reading package lists...
-Building dependency tree...
-Reading state information...
-jupyter-notebook is already the newest version (5.2.2-1).
-0 upgraded, 0 newly installed, 0 to remove and 177 not upgraded.
-#1 show version: screenfetch ******************************************************************
-awk: fatal: cannot open file `/proc/fb' for reading (No such file or directory)
-[0m[1;31m                          ./+o+-      [0m[1;31m root[0m[1m@[0m[0m[1;31mL440-SOSNUS[0m
-[0m[1;37m                  yyyyy- [0m[1;31m-yyyyyy+     [0m[1;31m OS:[0m Ubuntu 18.04 bionic[0m[1;33m [Ubuntu on Windows 10][0m
-[0m[1;37m               [0m[1;37m://+//////[0m[1;31m-yyyyyyo     [0m[1;31m Kernel:[0m x86_64 Linux 4.4.0-17134-Microsoft[0m
-[0m[1;33m           .++ [0m[1;37m.:/++++++/-[0m[1;31m.+sss/`     [0m[1;31m Uptime:[0m 1h 9m[0m
-[0m[1;33m         .:++o:  [0m[1;37m/++++++++/:--:/-     [0m[1;31m Packages:[0m 608[0m
-[0m[1;33m        o:+o+:++.[0m[1;37m`..```.-/oo+++++/    [0m[1;31m Shell:[0m bash 4.4.19[0m
-[0m[1;33m       .:+o:+o/.[0m[1;37m          `+sssoo+/   [0m[1;31m CPU:[0m Intel Core i7-4700MQ @ 8x 2.394GHz[0m
-[0m[1;37m  .++/+:[0m[1;33m+oo+o:`[0m[1;37m             /sssooo.  [0m[1;31m GPU:[0m [0m
-[0m[1;37m /+++//+:[0m[1;33m`oo+o[0m[1;37m               /::--:.  [0m[1;31m RAM:[0m 13028MiB / 16104MiB[0m
-[0m[1;37m \+/+o+++[0m[1;33m`o++o[0m[1;31m               ++////.  [0m
-[0m[1;37m  .++.o+[0m[1;33m++oo+:`[0m[1;31m             /dddhhh.  [0m
-[0m[1;33m       .+.o+oo:.[0m[1;31m          `oddhhhh+   [0m
-[0m[1;33m        \+.++o+o`[0m[1;31m`-````.:ohdhhhhh+    [0m
-[0m[1;33m         `:o+++ [0m[1;31m`ohhhhhhhhyo++os:     [0m
-[0m[1;33m           .o:[0m[1;31m`.syhhhhhhh/[0m[1;33m.oo++o`     [0m
-[0m[1;31m               /osyyyyyyo[0m[1;33m++ooo+++/    [0m
-[0m[1;31m                   ````` [0m[1;33m+oo+++o\:    [0m
-[0m[1;33m                          `oo++.      [0m
-#2 show version: pip3 ******************************************************************
-pip 9.0.1 from /usr/lib/python3/dist-packages (python 3.6)
-#3 show version: python3 ******************************************************************
-Python 3.6.7
-#4 show version: jupyter core ******************************************************************
-4.4.0
-#5 show version: jupyter notebook ******************************************************************
-5.2.2
-DONE!!! @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-7.79user 12.95system 0:34.46elapsed 60%CPU (0avgtext+0avgdata 115068maxresident)k
-0inputs+0outputs (0major+445768minor)pagefaults 0swaps
