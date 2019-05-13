@@ -16,7 +16,11 @@ sudo apt install python3-pip --reinstall -y
 echo "#5 install jupyter ##################################################################"
 python3 -m pip install jupyter
 
-echo "#6 install sl ##################################################################"
+echo "#6 install pandas ##################################################################"
+python3 -m pip install pandas
+
+
+echo "#7 install sl ##################################################################"
 sudo apt-get install sl
 
 echo "#1 show version: screenfetch ****************************************"
@@ -30,7 +34,10 @@ jupyter --version
 echo "#5 show version: jupyter notebook ****************************************"
 jupyter-notebook --version
 
-echo "#6 but trains are awesome @@@@@@@@@@@@@@@@@"
+echo "#6 show version: pandas ****************************************"
+pip3 show pandas
+
+echo "#7 but trains are awesome @@@@@@@@@@@@@@@@@"
 sl -e
 
 echo "DONE!!! @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
