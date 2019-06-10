@@ -19,6 +19,8 @@ python3 -m pip install jupyter
 echo "#6 install pandas ##################################################################"
 python3 -m pip install pandas
 
+echo "#7.1 install tree ##################################################################"
+sudo apt install tree
 
 echo "#7 install sl ##################################################################"
 sudo apt-get install sl
