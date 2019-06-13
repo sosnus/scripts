@@ -1,4 +1,4 @@
-echo("source: https://docs.microsoft.com/pl-pl/azure/azure-functions/functions-run-local")
+echo "source: https://docs.microsoft.com/pl-pl/azure/azure-functions/functions-run-local"
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
 sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
 
