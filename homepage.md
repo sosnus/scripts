@@ -5,10 +5,8 @@
 
 ### Download Our App!
 
-#### [>DOWNLOAD<](https://api.github.com/repos/IIS-ZPI/ZPI_2019_Dzienni_IO2_2/tarball/v1.2.0) 
-[  Github](https://github.com/sosnus/iot-tul) 
-
-
+#### [>DOWNLOAD v1.2.0<](https://api.github.com/repos/IIS-ZPI/ZPI_2019_Dzienni_IO2_2/tarball/v1.2.0) 
+#### [>JSON with latests file<](https://api.github.com/repos/IIS-ZPI/ZPI_2019_Dzienni_IO2_2/releases/latest) 
 
 ### Team
 * Dawid Macias
