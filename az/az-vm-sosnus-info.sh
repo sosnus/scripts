@@ -12,3 +12,5 @@ echo "${b}"
 
 echo "AZ get IP address..."
 az vm list-ip-addresses -n sosnus-vm -o table  
+
+echo "RDP app: Win+R mstsc"
