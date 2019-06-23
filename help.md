@@ -3,7 +3,8 @@
 ## tmux
 * ctrl+B, P
 * ctrl+B, , - rename window
-* ctrl+B, % - new window
+* ctrl+B, % - split horizontal
+* ctrl+B, " - split vertical
 
 
 # tmux cheat sheet
