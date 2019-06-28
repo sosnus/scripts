@@ -1,4 +1,4 @@
-echo "INSTALL: FIGLET, SCREENFETCH, SL (train)
+echo "INSTALL: FIGLET, SCREENFETCH, SL (train)"
 
 
 
