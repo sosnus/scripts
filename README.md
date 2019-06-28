@@ -18,3 +18,13 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 * fetchscreen
 * tmux
 * figlet
+
+## TODO:
+* add parameters
+* add remmina or other RDP
+* clean azure folder
+* add turbo-config-scripts
+* full-compatible Ubuntu-Debian-Raspbian
+* better python config
+* new installer logger (like start.sh)
+* turbo config (on start select packages and programs)
