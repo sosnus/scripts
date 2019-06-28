@@ -13,8 +13,8 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 
 
 ## install-misc.sh contains:
-*sl
-*git (and config)
-*fetchscreen
-*tmux
-*figlet
+* sl
+* git (and config)
+* fetchscreen
+* tmux
+* figlet

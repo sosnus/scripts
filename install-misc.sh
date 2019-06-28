@@ -13,6 +13,9 @@ git config --global user.name "Sosnus"
 
 # git config --global url."https://sosnus15@gmail.com@github.com".insteadOf "https://github.com"
 
+
+sudo apt install tree -y
+
 sudo apt install tmux -y
 
 sudo apt install screenfetch -y
