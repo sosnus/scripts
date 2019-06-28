@@ -6,7 +6,6 @@
 * ctrl+B, % - split horizontal
 * ctrl+B, " - split vertical
 
-
 # tmux cheat sheet
 
 (C-x means ctrl+x, M-x means alt+x)
