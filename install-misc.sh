@@ -8,7 +8,7 @@ sudo apt-get install -y figlet
 sudo apt-get install git -y
 
 
-git config --global user.email "sosnus15@gmail.comm"
+git config --global user.email "sosnus15@gmail.com"
 git config --global user.name "sosnus"
 
 # git config --global url."https://sosnus15@gmail.com@github.com".insteadOf "https://github.com"
