@@ -1,5 +1,6 @@
-# cfg-wsl (aka old wsl-sosnus-support)
+# scripts ( old name: cfg-wsl) (aka old wsl-sosnus-support)
 
+## merged rpi-scripts into this repo
 ## FAQ
 
 The WSL optional component is not enabled. Please enable it and try again.
