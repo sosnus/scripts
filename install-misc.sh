@@ -24,5 +24,7 @@ sudo apt-get install sl -y
 
 sl
 
+sudo apt install python-pip -y
+
 
 figlet FIGLET WORKING
