@@ -26,5 +26,8 @@ sl
 
 sudo apt install python-pip -y
 
+sudo apt install mkdocs -y
+
+
 
 figlet FIGLET WORKING
