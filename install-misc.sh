@@ -29,5 +29,7 @@ sudo apt install python-pip -y
 sudo apt install mkdocs -y
 
 
+sudo apt install htop -y
+
 
 figlet FIGLET WORKING
