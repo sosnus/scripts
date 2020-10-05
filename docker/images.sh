@@ -8,3 +8,12 @@ docker run -u 0 -d  -p 8080:8080 -p 50000:50000 --restart=always --name jenkins-
 
 
 # MONGO
+
+
+# ROS
+docker run -d -it -v /data/dockervolumes/ros/:/data --restart=always --name ros-test ros
+
+docker exec -it ros-test bash
+
+
+
