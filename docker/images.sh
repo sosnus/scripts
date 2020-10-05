@@ -13,6 +13,9 @@ docker run -u 0 -d  -p 8080:8080 -p 50000:50000 --restart=always --name jenkins-
 # ROS
 docker run -d -it -v /data/dockervolumes/ros/:/data --restart=always --name ros-test ros
 
+docker run -d -it -v /data/dockervolumes/ros/:/data --restart=always --name ros-test-xenial ros:kinetic-ros-xenial
+# xenial 16 with ros1
+
 docker exec -it ros-test bash
 
 
