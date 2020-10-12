@@ -9,6 +9,9 @@ docker run -u 0 -d  -p 8080:8080 -p 50000:50000 --restart=always --name jenkins-
 
 # MONGO
 
+#MOSQUITTO
+docker run -d -p 1883:1883 -p 1885:1885 -p 9001:9001  -v mosquitto.conf:/data/dockervolumes/mosqu
+itto/config/mosquitto.conf --restart=always --name=mqtt-server-container eclipse-mosquitto
 
 # ROS
 docker run -d -it -v /data/dockervolumes/ros/:/data --restart=always --name ros-test ros
