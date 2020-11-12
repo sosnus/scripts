@@ -26,4 +26,10 @@ docker exec -it ros-test bash
 
 # JUPYTER LAB
 docker run -p 10000:8888 -e JUPYTER_ENABLE_LAB=yes -e GRANT_SUDO=yes --user root -v /Users/stapul/data/dockervolumes/jupyter:/home/jovyan/work --name jupyter-lab jupyter/datascience-notebook:latest start-notebook.sh --NotebookApp.token=''
-# docker run -p 10000:8888 -e JUPYTER_ENABLE_LAB=yes -v /Users/stapul/data/dockervolumes/jupyter:/home/jovyan/work --name jupyter-lab jupyter/datascience-notebook:latest
+
+
+# SKANER ROS
+docker build -t skaner/kineticmqtt:latest .
+docker run -p 1887:8080 -d -it -v /data/dockervolumes/ros/:/data --restart=always --name skaner-kinetic-mqtt skaner/kineticmqtt:latest
+docker run -p 1887:8080 -d -it -v /Users/stapul/data/dockervolumes/ros/:/data --restart=always --name skaner-kinetic-mqtt skaner/kineticmqtt:latest
+docker exec -it skaner-kinetic-mqtt /ros_entrypoint.sh bash
