@@ -31,5 +31,7 @@ sudo apt install mkdocs -y
 
 sudo apt install htop -y
 
+sudo curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash
+
 
 figlet FIGLET WORKING
