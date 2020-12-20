@@ -5,6 +5,12 @@ docker run -d   -p 5000:5000   --restart=always   --name registry   -v /data/doc
 docker run -u 0 -d  -p 8080:8080 -p 50000:50000 --restart=always --name jenkins-server -v /data/dockerimages/jenkins:/var/jenkins_home jenkins/jenkins:lts
 
 # MINIO
+docker run -d -p 9000:9000 --restart=always --name minio-storage \
+  -e "MINIO_ACCESS_KEY=miniouseradmin" \
+  -e "MINIO_SECRET_KEY=wJalrXUtnFEMK7MDEPxRfiCYEXAMPLEKEY" \
+  -v /home/zombie/data/minio:/data/minio \
+  minio/minio server /data/minio
+
 
 
 # MONGO
