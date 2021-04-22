@@ -18,6 +18,10 @@ docker run -d -p 9000:9000 --restart=always --name minio-storage \
 docker run --name  some-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql
 
 # MONGO
+docker run -d -p 27017:27017  --restart=always --name mongo-container \
+    -e MONGO_INITDB_ROOT_USERNAME=mongoadmin \
+    -e MONGO_INITDB_ROOT_PASSWORD=secret \
+    mongo:4.4.5-bionic
 
 #MOSQUITTO
 docker run -d -p 1883:1883 -p 1885:1885 -p 9001:9001  -v /data/dockervolumes/mosquitto/:/mosquitto/ --restart=always --name=mqtt-server-container eclipse-mosquitto
