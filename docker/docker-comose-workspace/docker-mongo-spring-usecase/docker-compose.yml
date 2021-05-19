@@ -1,0 +1,28 @@
+version: "3.9"
+services: 
+    ra-front:
+        build: ./ra-front
+        image: ra-front:11.04
+        # args:
+            # dbaddr: todoPath
+    ra-back:
+        build: ./ra-back
+        image: ra-back:11.04
+        args:
+            dbaddr: todoPath
+        depends_on: 
+            - ra-db
+        # command: java -Dserver.port=3333 -jar ./app.jar
+    ra-db:
+        image: mongo:4.4.5-bionic
+        environment: 
+            - MONGO_INITDB_ROOT_USERNAME=mongoadmin
+            - MONGO_INITDB_ROOT_PASSWORD=secret
+        volumes:
+            - /data:/Users/stanislawpulawski/data/dockervolumes/raptors-volume/ra-db-vol
+        # env_file: 
+            # - settings.env
+        # deploy:
+            # restart_policy:
+                # condition: on-failure
+        
