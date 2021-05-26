@@ -1,0 +1,36 @@
+# PORTS:
+  # DB 3306 - closed
+  # backend: 8180
+  # myadmin: 8181
+
+version: '3.1'
+
+services:
+  backend:
+    build: .
+    ports:
+        - "8084:80"
+    container_name: backend 
+    depends_on:
+        - db
+        
+  db:
+    image: mysql:8
+    container_name: db
+    # ports:
+        # - "3306:3306" # closed # open only for testing
+    volumes:
+        - "./dbinit.sql:/docker-entrypoint-initdb.d/1.sql"
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: my-secret-pw 
+      
+  phpmyadmin:
+    image: phpmyadmin
+    container_name: phpmyadmin
+
+    restart: always
+    ports:
+      - 8085:80
+    environment:
+      - PMA_ARBITRARY=1
