@@ -32,6 +32,9 @@ docker run -d -p 27017:27017  --restart=always --name mongo-container \
 #MOSQUITTO
 docker run -d -p 1883:1883 -p 1885:1885 -p 9001:9001  -v /data/dockervolumes/mosquitto/:/mosquitto/ --restart=always --name=mqtt-server-container eclipse-mosquitto
 #docker run -d -p 1883:1883 -p 1885:1885 -p 9001:9001  -v mosquitto.conf:/data/dockervolumes/mosquitto/config/mosquitto.conf --restart=always --name=mqtt-server-container eclipse-mosquitto
+# old broker, without local blockade: <host:kontener>
+sudo docker run -d -p 1883:1883 --restart=always --name=mqtt-server-container eclipse-mosquitto:1.6
+
 
 #ZABBIX CLIENT
 sudo docker run --name zabbix-name --network=host --restart unless-stopped -e ZBX_HOST="192.168.2.45" -e ZBX_SERVER_HOST="192.168.2.45" -d zabbix/zabbix-agent:alpine-5.0.0
