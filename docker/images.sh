@@ -1,3 +1,6 @@
+### LAZYDOCKER INSTALL script ###
+curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash
+
 # JAVA SPRING build and run
 docker build -t iap-back .
 docker run --name  container-iap-back -p 8081:80 -d iap-back
