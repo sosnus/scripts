@@ -1,6 +1,10 @@
 ### LAZYDOCKER INSTALL script ###
 curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash
 
+# GET DATETIME (for example for tags):
+MYVAR=$(date +%y-%m-%d--%H-%M-%S)
+echo $MYVAR
+
 # JAVA SPRING build and run
 docker build -t iap-back .
 docker run --name  container-iap-back -p 8081:80 -d iap-back
