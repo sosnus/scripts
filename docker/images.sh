@@ -10,6 +10,8 @@ docker build -t iap-back .
 docker run --name  container-iap-back -p 8081:80 -d iap-back
 docker logs -f container-iap-back
 
+# NGINX
+docker run --name nginx-container -d -p 80:80 nginx
 
 # REGISTRY
 docker run -d   -p 5000:5000   --restart=always   --name registry   -v /data/dockervolumes/registry:/var/lib/registry   registry:2
