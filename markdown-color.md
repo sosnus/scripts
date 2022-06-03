@@ -18,7 +18,8 @@
 <h2>
 
 ```diff
-face: - red -
+face: 
+- red -
 eyes: 
 + green
 ```
