@@ -1,12 +1,12 @@
 #!/bin/bash
-######################################################################################
-## Markdown semver number generator for Changelog.md                                ##
-##                                                                                  ##
-##  ## [1.0.3+20220615(003)] - 2022-06-15 by StaPulawski                            ##
-##                                                                                  ##
-## source: https://github.com/sosnus/scripts/blob/master/semver-to-markdown.sh      ##
-##                                                                                  ##
-######################################################################################
+#######################################################################################
+##  Markdown semver number generator for Changelog.md                                ##
+##                                                                                   ##
+##  ## [1.0.3+20220615(003)] - 2022-06-15 by StaPulawski                             ##
+##                                                                                   ##
+##  source: https://github.com/sosnus/scripts/blob/master/semver-to-markdown.sh      ##
+##                                                                                   ##
+#######################################################################################
 while getopts x:y:z: flag 
 do
     case "${flag}" in
