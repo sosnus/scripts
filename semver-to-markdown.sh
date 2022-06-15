@@ -1,4 +1,9 @@
-#!/bin/bash 
+#!/bin/bash
+#######################################################
+## Markdown semver number generator for Changelog.md ##
+##                                                   ##
+## 2022.06.15 by StaPulawski                         ##
+#######################################################
 while getopts x:y:z: flag
 do
     case "${flag}" in
@@ -17,3 +22,9 @@ case $CNT in
   *) echo "ERR" ;;
 esac
 echo '## ['$X.$Y.$Z'+'$DATE1'('$ZZ')] - '$DATE2
+## result sample:
+## IN:  bash ./generateVersion.sh -x 0 -y 2 -z 58
+## OUT: `## [0.2.58+20220615(058)] - 2022-06-15`
+
+## IN:  bash ./generateVersion.sh -x 1 -y 33 -z 581
+## OUT: `## [1.33.581+20220615(581)] - 2022-06-15`
