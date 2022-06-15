@@ -7,6 +7,7 @@
 ##  source: https://github.com/sosnus/scripts/blob/master/semver-to-markdown.sh      ##
 ##                                                                                   ##
 #######################################################################################
+
 while getopts x:y:z: flag 
 do
     case "${flag}" in
@@ -25,6 +26,7 @@ case $CNT in
   *) echo "ERR" ;;
 esac
 echo '## ['$X.$Y.$Z'+'$DATE1'('$ZZ')] - '$DATE2
+
 ## result sample:
 ## IN:  bash ./generateVersion.sh -x 0 -y 2 -z 58
 ## OUT: `## [0.2.58+20220615(058)] - 2022-06-15`
