@@ -1,6 +1,7 @@
 # INFO
 
 ## tmux
+(windows - ctrl, macos - ^ )
 * ctrl+B, P
 * ctrl+B, , - rename window
 * ctrl+B, % - split horizontal
@@ -167,3 +168,7 @@ Some other settings that I use:
     
     
     source: https://gist.github.com/andreyvit/2921703
+    
+    
+# Linki
+* [https://www.fosslinux.com/58718/list-and-attach-tmux-sessions.htm]
