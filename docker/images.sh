@@ -13,6 +13,9 @@ docker logs -f container-iap-back
 # NGINX
 docker run --name nginx-container -d -p 80:80 nginx
 
+# NODE-RED
+docker run -it -p 1880:1880 -v node_red_data:/data --name mynodered nodered/node-red
+
 # REGISTRY
 docker run -d   -p 5000:5000   --restart=always   --name registry   -v /data/dockervolumes/registry:/var/lib/registry   registry:2
 
