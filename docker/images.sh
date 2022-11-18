@@ -1,3 +1,5 @@
+### Port <host>:<container>
+
 ### LAZYDOCKER INSTALL script ###
 curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash
 
@@ -34,6 +36,8 @@ docker run -d -p 9000:9000 --restart=always --name minio-storage \
 
 # MYSQL
 docker run --name  some-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql
+
+docker run --name  container-mysql -p 2001:3306 --restart=always -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql
 
 # MONGO
 docker run -d -p 27017:27017  --restart=always --name mongo-container \
