@@ -12,6 +12,14 @@ PowerShell as Admin
 
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 
+Also:
+
+`DISM /Online /Enable-Feature /All /FeatureName:Microsoft-Hyper-V`
+`bcdedit /set hypervisorlaunchtype auto`
+
+https://github.com/microsoft/WSL/issues/5363#issuecomment-640337948
+
+
 
 ## install-misc.sh contains:
 * sl
