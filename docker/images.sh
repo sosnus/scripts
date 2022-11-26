@@ -35,6 +35,8 @@ docker run -d -p 9000:9000 --restart=always --name minio-storage \
   minio/minio server /data/minio
 
 # MYSQL
+docker run --name  container-mysql -p 3306:3306 --restart=always -e MYSQL_ROOT_PASSWORD=SECRET -d mysql:5.7
+
 docker run --name  some-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql
 
 docker run --name  container-mysql -p 2001:3306 --restart=always -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql
