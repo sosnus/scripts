@@ -24,6 +24,10 @@ docker run -d   -p 5000:5000   --restart=always   --name registry   -v /data/doc
 # JENKINS
 docker run -u 0 -d  -p 8080:8080 -p 50000:50000 --restart=always --name jenkins-server -v /data/dockerimages/jenkins:/var/jenkins_home jenkins/jenkins:lts
 
+# INFLUXDB
+
+docker run -d -p 8086:8086 --name=container-influxdb -v influxdb:/var/lib/influxdb influxdb:1.7
+
 # OPENCV (run interactive)
 docker run -it -v /Users/stanislawpulawski/data/dockervolumes/opencv:/data/workspace jjanzic/docker-python3-opencv bash  
 
