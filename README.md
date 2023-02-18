@@ -3,6 +3,7 @@
 ## merged rpi-scripts into this repo
 ## FAQ
 
+#### WSL error
 The WSL optional component is not enabled. Please enable it and try again.
 See https://aka.ms/wslinstall for details.
 Error: 0x8007007e
@@ -20,6 +21,10 @@ Also:
 
 https://github.com/microsoft/WSL/issues/5363#issuecomment-640337948
 
+#### WSL2 update download
+```
+https://learn.microsoft.com/en-us/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package
+```
 
 
 ## install-misc.sh contains:
