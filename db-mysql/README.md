@@ -24,3 +24,16 @@ SHOW tables;
 ```
 telnet 127.0.0.1 3306
 ```
+
+## Create user in CLI
+```
+mysql -h 127.0.0.1 -P 3306 -u root -p
+
+CREATE DATABASE test;
+CREATE USER 'spowner'@'%' IDENTIFIED BY '1234'; 
+GRANT ALL PRIVILEGES ON test.* To 'spowner'@'%'; 
+FLUSH PRIVILEGES;
+
+# THEN
+mysql -h 127.0.0.1 test -P 3306 -u spowner -p
+```
