@@ -1,0 +1,24 @@
+version: '3.4'
+
+services:
+  tcore:
+    image: tagoio/tagocore
+    ports:
+      - "5501:8888"
+      - "5502:8999"
+    depends_on:
+      - db
+  db:
+    image: mysql:8.0
+    container_name: db
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    ports:
+      - "5503:3306"
+    volumes:
+      - dbdata:/var/lib/mysql
+volumes:
+  dbdata:
