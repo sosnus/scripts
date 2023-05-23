@@ -15,6 +15,9 @@ docker logs -f container-iap-back
 # NGINX
 docker run --name nginx-container -d -p 80:80 nginx
 
+# RUNDECK
+sudo docker run --name some-rundeck -p 4440:4440 -v data:/home/rundeck/server/data rundeck/rundeck:4.13.0
+
 # NODE-RED
 docker run -it -p 1880:1880 -v node_red_data:/data --name mynodered nodered/node-red
 
