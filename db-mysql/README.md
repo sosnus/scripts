@@ -37,3 +37,16 @@ FLUSH PRIVILEGES;
 # THEN
 mysql -h 127.0.0.1 test -P 3306 -u spowner -p
 ```
+
+## Create user in CLI (for READ ONLY)
+```
+mysql -h 127.0.0.1 -P 3306 -u root -p
+
+CREATE USER 'userreadonly'@'%' IDENTIFIED BY '1234'; 
+GRANT SELECT ON test.* To 'userreadonly'@'%'; 
+FLUSH PRIVILEGES;
+
+# THEN
+mysql -h 127.0.0.1 test -P 3306 -u userreadonly -p
+```
+
