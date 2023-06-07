@@ -28,8 +28,10 @@ docker run -d   -p 5000:5000   --restart=always   --name registry   -v /data/doc
 docker run -u 0 -d  -p 8080:8080 -p 50000:50000 --restart=always --name jenkins-server -v /data/dockerimages/jenkins:/var/jenkins_home jenkins/jenkins:lts
 
 # INFLUXDB
-
 docker run -d -p 8086:8086 --restart=always --name=container-influxdb -v influxdb:/var/lib/influxdb influxdb:1.7
+
+# GRAFANA
+docker run -d --name=grafana -p 40156:3000 --name grafana-container -d grafana/grafana:8.5.26
 
 # OPENCV (run interactive)
 docker run -it -v /Users/stanislawpulawski/data/dockervolumes/opencv:/data/workspace jjanzic/docker-python3-opencv bash  
