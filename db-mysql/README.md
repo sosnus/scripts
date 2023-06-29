@@ -33,7 +33,7 @@ CREATE DATABASE test;
 CREATE USER 'spowner'@'%' IDENTIFIED BY '1234'; 
 GRANT ALL PRIVILEGES ON test.* To 'spowner'@'%'; 
 FLUSH PRIVILEGES;
-
+## for mysql - in case mariaDB we need another query
 # THEN
 mysql -h 127.0.0.1 test -P 3306 -u spowner -p
 ```
