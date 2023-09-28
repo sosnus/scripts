@@ -1,0 +1,31 @@
+volumes:
+  vol-emqx-data:
+    name: foo-emqx-data
+  vol-emqx-etc:
+    name: foo-emqx-etc
+  vol-emqx-log:
+    name: foo-emqx-log
+
+services:
+  emqx:
+    image: emqx/emqx:latest
+    restart: always
+    environment:
+      EMQX_NAME: foo_emqx
+      EMQX_HOST: 127.0.0.1
+    ports:
+      - 1883:1883
+      - 8883:8883
+      - 9001:9001      
+      - 18083:18083      
+    volumes:
+      - vol-emqx-data:/opt/emqx/data
+      - vol-emqx-etc:/opt/emqx/etc
+      - vol-emqx-log:/opt/emqx/log
+
+
+# ssl:default on 0.0.0.0:8883 started.
+# tcp:default on 0.0.0.0:1883 started.
+# ws:default on 0.0.0.0:8083 started.
+# wss:default on 0.0.0.0:8084 started.
+# http:dashboard on :18083 started.
