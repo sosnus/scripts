@@ -1,3 +1,6 @@
+# DISK SMART INFO (where X - disk number, for example sda3)
+smartctl -a /dev/sdX
+
 # show size of partitions
 df -h
 # show size of files inside this and children folders
