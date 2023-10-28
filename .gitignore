@@ -1,3 +1,13 @@
 **/.DS_Store
 docker/docker-comose-workspace/tago-core-mysql/.env
 docker/docker-comose-workspace/tago-core-mysql/.env.old
+docker/docker-comose-workspace/nodered/nodered-101/data/.config.nodes.json
+docker/docker-comose-workspace/nodered/nodered-101/data/.config.nodes.json.backup
+docker/docker-comose-workspace/nodered/nodered-101/data/.config.users.json
+docker/docker-comose-workspace/nodered/nodered-101/data/.config.runtime.json
+docker/docker-comose-workspace/nodered/nodered-101/data/.config.users.json.backup
+docker/docker-comose-workspace/nodered/nodered-101/data/.sessions.json
+docker/docker-comose-workspace/nodered/nodered-101/data/package.json
+docker/docker-comose-workspace/nodered/nodered-101/data/.npm/_logs/2023-10-21T03_37_25_030Z-debug-0.log
+docker/docker-comose-workspace/nodered/nodered-101/data/.npm/_logs/2023-10-21T03_41_38_396Z-debug-0.log
+docker/docker-comose-workspace/nodered/nodered-101/data/.npm/_logs/2023-10-21T04_06_17_148Z-debug-0.log
