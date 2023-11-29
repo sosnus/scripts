@@ -3,6 +3,10 @@
 ## merged rpi-scripts into this repo
 ## FAQ
 
+### WSL run WSL2
+https://learn.microsoft.com/pl-pl/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package
+
+
 #### WSL error
 The WSL optional component is not enabled. Please enable it and try again.
 See https://aka.ms/wslinstall for details.
