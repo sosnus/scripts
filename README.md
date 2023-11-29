@@ -5,7 +5,11 @@
 
 ### WSL run WSL2
 https://learn.microsoft.com/pl-pl/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package
-
+1. install update from file
+2. wsl.exe --update
+3. wsl --set-default-version 2
+4. wsl.exe --install --no-distribution
+5. restart PC
 
 #### WSL error
 The WSL optional component is not enabled. Please enable it and try again.
