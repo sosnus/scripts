@@ -88,6 +88,11 @@ MyToken='MyTokenHere'
 MyAddr='/data/dockervolumes/jupyter/merkury'
 sudo docker run -d -p 10000:8888 -e JUPYTER_ENABLE_LAB=yes -e GRANT_SUDO=yes --user root -v /data/dockervolumes/jupyter/merkury:/home/jovyan/work --restart=always --name jupyter-lab jupyter/datascience-notebook:latest start-notebook.sh --NotebookApp.token=$MyToken
 
+# JUPYTER HUB
+sudo docker run -d -p 1003:8000 --restart=always --name jupyterhub jupyterhub/jupyterhub jupyterhub
+# more: https://jupyterhub.readthedocs.io/en/stable/tutorial/quickstart-docker.html#run-the-docker-image
+
+
 # SKANER ROS
 docker build -t skaner/kineticmqtt:latest .
 docker run -p 1887:8080 -d -it -v /data/dockervolumes/ros/:/data --restart=always --name skaner-kinetic-mqtt skaner/kineticmqtt:latest
