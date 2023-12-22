@@ -42,6 +42,18 @@ https://learn.microsoft.com/en-us/windows/wsl/install-manual#step-4---download-t
 * tmux
 * figlet
 
+## BASH Ubuntu Debian snippets .sh
+### Watch
+run script in loop with interval
+```
+watch -n 600 <command> <flags>
+```
+
+Bash alternative to watch
+while true; do ./my_script.sh; sleep 60; don
+remember about `tmux`!
+
+
 ## TODO:
 * add parameters
 * add remmina or other RDP
