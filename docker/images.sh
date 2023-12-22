@@ -1,5 +1,5 @@
 ### Port <host>:<container>
-
+#  --restart=always
 ### LAZYDOCKER INSTALL script ###
 curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash
 
@@ -70,7 +70,7 @@ sudo docker run -d -p 1883:1883 --restart=always --name=mqtt-server-container ec
 
 
 #ZABBIX CLIENT
-sudo docker run --name zabbix-name --network=host --restart unless-stopped -e ZBX_HOST="192.168.2.45" -e ZBX_SERVER_HOST="192.168.2.45" -d zabbix/zabbix-agent:alpine-5.0.0
+sudo docker run -d --name zabbix-name --network=host --restart unless-stopped -e ZBX_HOST="192.168.2.45" -e ZBX_SERVER_HOST="192.168.2.45" -d zabbix/zabbix-agent:alpine-5.0.0
 
 # ROS
 docker run -d -it -v /data/dockervolumes/ros/:/data --restart=always --name ros-test ros
@@ -81,7 +81,7 @@ docker run -d -it -v /data/dockervolumes/ros/:/data --restart=always --name ros-
 docker exec -it ros-test bash
 
 # JUPYTER LAB
-docker run -p 10000:8888 -e JUPYTER_ENABLE_LAB=yes -e GRANT_SUDO=yes --user root -v /Users/stanislawpulawski/data/dockervolumes/jupyter:/home/jovyan/work --name jupyter-lab jupyter/datascience-notebook:latest start-notebook.sh --NotebookApp.token=''
+docker run -d -p 10000:8888 -e JUPYTER_ENABLE_LAB=yes -e GRANT_SUDO=yes --user root -v /Users/stanislawpulawski/data/dockervolumes/jupyter:/home/jovyan/work --name jupyter-lab jupyter/datascience-notebook:latest start-notebook.sh --NotebookApp.token=''
 
 # Jupyter lab skaner
 MyToken='MyTokenHere'
