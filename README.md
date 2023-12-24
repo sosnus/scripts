@@ -48,6 +48,10 @@ run script in loop with interval
 ```
 watch -n 600 <command> <flags>
 ```
+for example:
+```bash
+watch -n 600 python3 main.py
+```
 
 Bash alternative to watch
 while true; do ./my_script.sh; sleep 60; don
