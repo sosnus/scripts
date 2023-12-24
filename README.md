@@ -48,6 +48,7 @@ run script in loop with interval
 ```
 watch -n 600 <command> <flags>
 ```
+(do it forever, where -n is interval in seconds)
 for example:
 ```bash
 watch -n 600 python3 main.py
