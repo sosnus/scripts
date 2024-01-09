@@ -50,3 +50,7 @@ FLUSH PRIVILEGES;
 mysql -h 127.0.0.1 test -P 3306 -u userreadonly -p
 ```
 
+## Create Database
+```sql
+-- TODO
+```
