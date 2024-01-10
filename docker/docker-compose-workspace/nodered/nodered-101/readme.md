@@ -10,3 +10,9 @@ more about password: https://nodered.org/docs/getting-started/docker
 3. copy settings.js
 4. replace password hash
 5. deploy nodered
+
+
+
+## favourites nodes
+* https://flows.nodered.org/node/node-red-node-mysql
+* https://flows.nodered.org/node/node-red-dashboard
