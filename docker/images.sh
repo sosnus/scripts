@@ -80,10 +80,14 @@ docker run -d -it -v /data/dockervolumes/ros/:/data --restart=always --name ros-
 
 docker exec -it ros-test bash
 
-# JUPYTER LAB
+# JUPYTER LAB (macos)
 docker run -d -p 10000:8888 -e JUPYTER_ENABLE_LAB=yes -e GRANT_SUDO=yes --user root -v /Users/stanislawpulawski/data/dockervolumes/jupyter:/home/jovyan/work --name jupyter-lab jupyter/datascience-notebook:latest start-notebook.sh --NotebookApp.token=''
 # https://hub.docker.com/r/jupyter/datascience-notebook
 # how to add JS: https://github.com/n-riesco/ijavascript?tab=readme-ov-file#ubuntu
+
+ MyToken='MyTokenHere'
+# better path
+docker run -d -p 10000:8888 -e JUPYTER_ENABLE_LAB=yes -e GRANT_SUDO=yes --user root -v /root/storage/jupyterfiles:/home/jovyan/work --restart=always --name jupyter-lab jupyter/datascience-notebook:latest start-notebook.sh --NotebookApp.token=$MyToken
 
 
 
