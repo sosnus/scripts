@@ -41,6 +41,13 @@ docker run -p 8888:8888 -p 8999:8999 tagoio/tagocore
 docker run -p 40083:8888 -p 40084:8999 --name tcore-container -d tagoio/tagocore:0.7-alpine
 
 # MINIO
+docker run -d -p 9000:9000 -p 9001:9001 --restart=always --name minio-storage \
+  -e "MINIO_ROOT_USER=miniouseradmin" \
+  -e "MINIO_ROOT_PASSWORD=wJalrXUtnFEMK7MDEPxRfiCYEXAMPLEKEY" \
+  -v /root/miniodata:/data/minio \
+  minio/minio server /data/minio  --console-address ":9001"
+
+ ## deprecated minio 
 docker run -d -p 9000:9000 --restart=always --name minio-storage \
   -e "MINIO_ACCESS_KEY=miniouseradmin" \
   -e "MINIO_SECRET_KEY=wJalrXUtnFEMK7MDEPxRfiCYEXAMPLEKEY" \
