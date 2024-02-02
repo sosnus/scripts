@@ -3,6 +3,7 @@
 ## tmux
 (windows - ctrl, macos - ^ )
 * ctrl+B, P
+* ctrl+B, D - detach (back using tmux attach-session)
 * ctrl+B, , - rename window
 * ctrl+B, % - split horizontal
 * ctrl+B, " - split vertical
