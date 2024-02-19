@@ -45,7 +45,7 @@ https://learn.microsoft.com/en-us/windows/wsl/install-manual#step-4---download-t
 ## BASH Ubuntu Debian snippets .sh
 ### Watch
 run script in loop with interval
-```
+``` bash
 watch -n 600 <command> <flags>
 ```
 (do it forever, where -n is interval in seconds)
