@@ -36,6 +36,8 @@ docker run -d --name=grafana -p 40156:3000 --name grafana-container -d grafana/g
 # OPENCV (run interactive)
 docker run -it -v /Users/stanislawpulawski/data/dockervolumes/opencv:/data/workspace jjanzic/docker-python3-opencv bash  
 
+docker run -d --name=grafana -p 40017 --name grafana-container -d grafana/grafana-oss:10.0.12
+
 # Tago Core TCORE
 docker run -p 8888:8888 -p 8999:8999 tagoio/tagocore
 docker run -p 40083:8888 -p 40084:8999 --name tcore-container -d tagoio/tagocore:0.7-alpine
