@@ -16,3 +16,13 @@ sudo systemctl set-default multi-user
 ```
 sudo apt-get install --reinstall iptables
 ```
+
+### All in one
+
+```
+sudo apt-get install --reinstall iptables
+
+sudo ufw enable
+
+sudo ufw status
+```
