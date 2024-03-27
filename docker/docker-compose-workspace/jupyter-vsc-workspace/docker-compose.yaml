@@ -6,12 +6,12 @@ services:
     container_name: jupyter-lab
     restart: always
     ports:
-      - "10000:8888"
+      - 10000:8888
     environment:
       - JUPYTER_ENABLE_LAB=yes
       - GRANT_SUDO=yes
-      - NotebookApp.token=${MyToken}
+      # - NotebookApp.token=${MyToken}
     user: root
     volumes:
-      - ${storagepath}/jupyterfiles:/home/jovyan/work
+      - ${storagepath}/jupyterfiles:/home/jovyan
     command: start-notebook.sh
