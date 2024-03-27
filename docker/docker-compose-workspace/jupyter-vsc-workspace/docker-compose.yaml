@@ -13,5 +13,5 @@ services:
       # - NotebookApp.token=${MyToken}
     user: root
     volumes:
-      - ${storagepath}/jupyterfiles:/home/jovyan
+      - ${storagepath}/jupyterdata:/home/jovyan/work
     command: start-notebook.sh
