@@ -18,3 +18,15 @@ sudo apt install jq
 sudo apt install openssh-server
 sudo apt install ufw
 ```
+
+### Ubuntu monitor service
+```bash
+sudo apt install htop
+sudo apt install jtop
+sudo apt install iftop
+sudo apt install nload
+sudo apt install bmon
+
+
+
+```
