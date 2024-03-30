@@ -6,6 +6,17 @@
 ### How to connect to container
 * `docker exec -it nginx-container /bin/bash`
 
+### Remove contaienr
+```
+docker stop nginx-container
+```
+
+### Run compose in background
+```
+docker-compose up -d
+```
+
+
 
 ### Basic flags
 * `-it` - interactive
