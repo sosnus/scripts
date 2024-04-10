@@ -1,0 +1,25 @@
+name: influxdb-compose
+services:
+    influxdb:
+        container_name: influxdb2-container
+        ports:
+            - 8086:8086
+        volumes:
+            - type: volume
+              source: influxdb2-data
+              target: /var/lib/influxdb2
+            - type: volume
+              source: influxdb2-config
+              target: /etc/influxdb2
+        environment:
+            - DOCKER_INFLUXDB_INIT_MODE=setup
+            - DOCKER_INFLUXDB_INIT_USERNAME=ADMIN_USERNAME
+            - DOCKER_INFLUXDB_INIT_PASSWORD=ADMIN_PASSWORD
+            - DOCKER_INFLUXDB_INIT_ORG=ORG_NAME
+            - DOCKER_INFLUXDB_INIT_BUCKET=BUCKET_NAME
+        image: influxdb:2
+volumes:
+    influxdb2-data:
+        name: influxdb2-data
+    influxdb2-config:
+        name: influxdb2-config
