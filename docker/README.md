@@ -6,6 +6,17 @@
 ### How to connect to container
 * `docker exec -it nginx-container /bin/bash`
 
+### Remove contaienr
+```
+docker stop nginx-container
+```
+
+### Run compose in background
+```
+docker-compose up -d
+```
+
+
 
 ### Basic flags
 * `-it` - interactive
@@ -37,9 +48,20 @@ docker compose up -d
 
 
 ## How to install Portainer
+first of all, create volume
 ```
 docker volume create portainer_data
-
+```
+without http
+```
 docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
+```
+with http
+```
+docker run -d -p 8000:8000 -p 9000:9000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
+```
+restart
+```
+docker restart portainer
 ```
 

@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  jupyter-lab:
+    image: jupyter/datascience-notebook:latest
+    container_name: jupyter-lab
+    restart: always
+    ports:
+      - 10000:8888
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+      - GRANT_SUDO=yes
+      # - NotebookApp.token=${MyToken}
+    user: root
+    volumes:
+      - ${storagepath}/jupyterdata:/home/jovyan/work
+    command: start-notebook.sh
