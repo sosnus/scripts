@@ -7,3 +7,6 @@ services:
     restart: always
     stdin_open: true
     tty: true
+    volumes:
+      - ./script.sh:/usr/local/bin/script.sh
+    command: ["/bin/bash", "/usr/local/bin/script.sh"]
