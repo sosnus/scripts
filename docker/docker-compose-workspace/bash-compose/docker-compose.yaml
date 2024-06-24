@@ -2,11 +2,10 @@ version: '3.8'
 
 services:
   ubuntu:
-    image: ubuntu:24.04
-    container_name: ubuntu_container
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: bash_runner
     restart: always
-    stdin_open: true
-    tty: true
     volumes:
       - ./script.sh:/usr/local/bin/script.sh
-    command: ["/bin/bash", "/usr/local/bin/script.sh"]
