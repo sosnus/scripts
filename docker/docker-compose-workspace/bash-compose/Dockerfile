@@ -11,3 +11,4 @@ RUN chmod +x /usr/local/bin/script.sh
 
 # Set the default command to run the script
 CMD ["/bin/bash", "/usr/local/bin/script.sh"]
+
