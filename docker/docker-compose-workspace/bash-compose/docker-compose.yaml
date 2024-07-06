@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  ubuntu:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: bash_runner
+    restart: always
+    environment:
+      LANG: pl_PL.UTF-8
+      LANGUAGE: pl_PL:pl
+      LC_ALL: pl_PL.UTF-8
+      TZ: Europe/Warsaw
+      TARGETURL: "https://mws02-50458.wykr.es/api/push/uuu?status=up&msg=OK&ping="
+    volumes:
+      - ./script.sh:/usr/local/bin/script.sh
