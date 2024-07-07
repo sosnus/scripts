@@ -20,4 +20,5 @@ services:
       - "3000:3000"
     # adding the mount volume point which we create earlier
     volumes:
-      - '$PWD/data:/var/lib/grafana'
+      - /var/lib/grafana:/var/lib/grafana
+      # - '$PWD/data:/var/lib/grafana'
