@@ -17,6 +17,8 @@ python --version
 sudo apt install jq
 sudo apt install openssh-server
 sudo apt install ufw
+sudo apt install -y mosquitto-clients
+
 ```
 
 ### Ubuntu monitor service
@@ -26,7 +28,12 @@ sudo apt install jtop
 sudo apt install iftop
 sudo apt install nload
 sudo apt install bmon
+```
 
 
-
+## Mosquitto problem
+```bash
+# sudo systemctl stop mosquitto
+# sudo systemctl disable mosquitto
+# sudo pkill mosquitto
 ```
