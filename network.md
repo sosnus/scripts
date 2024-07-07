@@ -1,3 +1,6 @@
+netstat -plunt
+
+
 # IP
 ip a
 ip -o link
