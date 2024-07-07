@@ -1,0 +1,23 @@
+version: '3.8' # You can choose the appropriate version
+
+services:
+  m3db:
+    image: quay.io/m3db/m3dbnode:v1.1.0
+    container_name: m3db_container
+    ports:
+      - "7201:7201"
+      - "7203:7203"
+    volumes:
+      - ./m3db_data:/var/lib/m3db
+  grafana:
+    image: grafana/grafana-oss
+    container_name: grafana_container
+    restart: unless-stopped
+    # if you are running as root then set it to 0
+    # else find the right id with the id -u command
+    # user: '0'
+    ports:
+      - "3000:3000"
+    # adding the mount volume point which we create earlier
+    volumes:
+      - '$PWD/data:/var/lib/grafana'
