@@ -119,3 +119,23 @@ curl -X "POST" -G "http://$ADDR_INFLUX:$PORT_INFLUX/api/v1/query_range" \
 
 
 ```
+
+
+
+
+
+# Influxdb requests
+``` bash
+# write data
+curl --location --request POST http://$ADDR_INFLUX:$PORT_INFLUX/write?db=mydb \
+--header 'Content-Type: text/plain' \
+--data-raw 'power,device=myturbine01 value=0.2'
+
+
+
+
+curl --location --request POST http://$ADDR_INFLUX:$PORT_INFLUX/query?db=mydb \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'q=SELECT * FROM power'
+
+```
