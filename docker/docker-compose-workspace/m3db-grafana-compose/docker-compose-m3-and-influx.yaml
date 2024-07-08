@@ -32,9 +32,9 @@ services:
     environment:
       - INFLUXDB_DB=mydb
       - INFLUXDB_ADMIN_USER=admin
-      - INFLUXDB_ADMIN_PASSWORD=admin_password
+      - INFLUXDB_ADMIN_PASSWORD=${admin_password}
       - INFLUXDB_USER=user
-      - INFLUXDB_USER_PASSWORD=user_password
+      - INFLUXDB_USER_PASSWORD=${user_password}
     restart: unless-stopped
 
 volumes:
