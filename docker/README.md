@@ -65,3 +65,12 @@ restart
 docker restart portainer
 ```
 
+# Basic commands
+``` bash
+docker stop <name>_container
+docker rm <name>_container
+docker rm -f <name>_container
+```
+## Basic flags
+* -d - detashed
+* ?? - interactive bash connect
