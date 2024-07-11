@@ -74,3 +74,14 @@ docker rm -f <name>_container
 ## Basic flags
 * -d - detashed
 * ?? - interactive bash connect
+
+
+## Important misc command
+Prevent autostart:
+``` bash
+sudo docker update --restart=no jupyter-lab
+```
+Attach (open sh shell)
+``` bash
+docker attach docker_container
+```
