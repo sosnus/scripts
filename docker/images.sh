@@ -7,6 +7,14 @@ curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/i
 MYVAR=$(date +%y-%m-%d--%H-%M-%S)
 echo $MYVAR
 
+
+# DOCKER!
+docker pull docker
+docker run -it --name container_docker docker sh  
+docker attach docker_container
+
+
+
 # JAVA SPRING build and run
 docker build -t iap-back .
 docker run --name  container-iap-back -p 8081:80 -d iap-back
