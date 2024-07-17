@@ -10,8 +10,13 @@ echo $MYVAR
 
 # DOCKER!
 docker pull docker
-docker run -it --name container_docker docker sh  
-docker attach docker_container
+docker run -it --name container-docker docker sh  
+docker attach docker-container
+
+# ZEROTIER
+# more https://hub.docker.com/r/zerotier/zerotier
+docker run --name zerotier-container --rm --cap-add NET_ADMIN --device /dev/net/tun zerotier/zerotier:latest abcdefdeadbeef00
+docker exec -it zerotier-container /bin/bash
 
 
 
