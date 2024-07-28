@@ -14,3 +14,11 @@
 
 ## More information
 https://hub.docker.com/_/mysql/
+
+
+# How allow to change db addr?
+Use flag: `-e PMA_ARBITRARY=1`
+For example:
+``` bash
+docker run --name myadmin -d -e PMA_ARBITRARY=1 -p 8080:80 phpmyadmin
+```
