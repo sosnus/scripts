@@ -1,5 +1,8 @@
 netstat -plunt
 
+<!-- sudo apt-get install net-tools -->
+
+
 
 # IP
 ip a
