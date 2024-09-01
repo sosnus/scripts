@@ -79,3 +79,64 @@ dd if=/dev/zero of=emptyfile.bin bs=1M count=5000
 
 # xavier chceck storage
 df -h /dev/nvme0n1p1 /dev/mmcblk0p1
+
+
+
+Domyślnie, montowanie dysku w systemie Linux jest tymczasowe i po restarcie systemu nie zostanie ono automatycznie przywrócone, chyba że skonfigurujesz je w taki sposób, by montowało się automatycznie.
+
+### Jak ustawić automatyczne montowanie po restarcie?
+
+Aby dysk był montowany automatycznie po każdym restarcie, musisz dodać wpis do pliku `/etc/fstab`, który definiuje systemy plików, które mają być montowane podczas rozruchu.
+
+#### Krok 1: Sprawdź UUID dysku
+
+Najpierw sprawdź UUID swojego dysku, co umożliwi trwałe odniesienie do niego, nawet jeśli zmieni się nazwa urządzenia.
+
+```bash
+blkid
+```
+
+Lub
+
+```bash
+lsblk -o UUID,NAME,FSTYPE,MOUNTPOINT
+```
+
+#### Krok 2: Dodaj wpis do `/etc/fstab`
+
+Edytuj plik `/etc/fstab` i dodaj nowy wpis dla dysku:
+
+```bash
+sudo nano /etc/fstab
+```
+
+Dodaj linię w formacie:
+
+```bash
+UUID=YOUR_UUID /ścieżka/montowania typ_systemu_plików defaults 0 2
+```
+
+**Przykład:**
+
+```bash
+UUID=1234-ABCD /home/recomputer/agroworkspace/agrostackdata ext4 defaults 0 2
+```
+
+- **UUID=1234-ABCD**: Zastąp UUID swoim UUID.
+- **/home/recomputer/agroworkspace/agrostackdata**: Zastąp tą ścieżką docelową montowania.
+- **ext4**: Zastąp tym właściwy system plików.
+
+#### Krok 3: Przetestuj montowanie
+
+Po zapisaniu pliku `/etc/fstab`, przetestuj montowanie:
+
+```bash
+sudo mount -a
+```
+
+Jeśli nie pojawiły się żadne błędy, montowanie powinno działać poprawnie i przetrwać restart systemu.
+
+### Podsumowanie
+- **Domyślnie** montowanie jest tymczasowe.
+- **Aby było trwałe**, dodaj wpis do pliku `/etc/fstab`.
+- **Testowanie**: Użyj `sudo mount -a`, aby sprawdzić, czy konfiguracja działa.
