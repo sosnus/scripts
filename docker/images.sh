@@ -12,6 +12,9 @@ echo $MYVAR
 docker pull docker
 docker run -it --name container-docker docker sh  
 docker attach docker-container
+docker exec -it jenkins-container /bin/bash
+docker start jenkins-container
+
 
 # ZEROTIER
 # more https://hub.docker.com/r/zerotier/zerotier
@@ -38,7 +41,7 @@ docker run -it -p 1880:1880 -v node_red_data:/data --name mynodered nodered/node
 docker run -d   -p 5000:5000   --restart=always   --name registry   -v /data/dockervolumes/registry:/var/lib/registry   registry:2
 
 # JENKINS
-docker run -u 0 -d  -p 8080:8080 -p 50000:50000 --restart=always --name jenkins-server -v /data/dockerimages/jenkins:/var/jenkins_home jenkins/jenkins:lts
+docker run -u 0 -d  -p 8080:8080 -p 50000:50000 --restart=always --name jenkins-container -v /data/dockerimages/jenkins:/var/jenkins_home jenkins/jenkins:lts
 
 # INFLUXDB
 docker run -d -p 8086:8086 --restart=always --name=container-influxdb -v influxdb:/var/lib/influxdb influxdb:1.7
