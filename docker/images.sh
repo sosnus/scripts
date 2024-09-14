@@ -21,7 +21,8 @@ docker start jenkins-container
 docker run --name zerotier-container --rm --cap-add NET_ADMIN --device /dev/net/tun zerotier/zerotier:latest abcdefdeadbeef00
 docker exec -it zerotier-container /bin/bash
 
-
+# FILEBROWSER
+docker run -v /root/workspace/jenkins-workspace:/srv -d --name filebrowser-container --restart=always -p 8082:80 filebrowser/filebrowser
 
 # JAVA SPRING build and run
 docker build -t iap-back .
@@ -38,7 +39,7 @@ sudo docker run --name some-rundeck -p 4440:4440 -v data:/home/rundeck/server/da
 docker run -it -p 1880:1880 -v node_red_data:/data --name mynodered nodered/node-red
 
 # REGISTRY
-docker run -d   -p 5000:5000   --restart=always   --name registry   -v /data/dockervolumes/registry:/var/lib/registry   registry:2
+docker run -d -p 5000:5000 --restart=always --name registry -v /data/dockervolumes/registry:/var/lib/registry   registry:2
 
 # JENKINS
 docker run -u 0 -d  -p 8080:8080 -p 50000:50000 --restart=always --name jenkins-container -v /data/dockerimages/jenkins:/var/jenkins_home jenkins/jenkins:lts
