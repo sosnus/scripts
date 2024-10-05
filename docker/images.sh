@@ -36,7 +36,7 @@ docker run --name nginx-container -d -p 80:80 nginx
 sudo docker run --name some-rundeck -p 4440:4440 -v data:/home/rundeck/server/data rundeck/rundeck:4.13.0
 
 # NODE-RED
-docker run -it -p 1880:1880 -v node_red_data:/data --name mynodered nodered/node-red
+docker run -it -d -p 1880:1880 --restart unless-stopped -v node_red_data:/data --name nodered-container nodered/node-red
 
 # REGISTRY
 docker run -d -p 5000:5000 --restart=always --name registry -v /data/dockervolumes/registry:/var/lib/registry   registry:2
