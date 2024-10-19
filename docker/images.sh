@@ -115,7 +115,8 @@ docker run -d -p 10000:8888 -e JUPYTER_ENABLE_LAB=yes -e GRANT_SUDO=yes --user r
 # better path
 docker run -d -p 10000:8888 -e JUPYTER_ENABLE_LAB=yes -e GRANT_SUDO=yes --user root -v /root/storage/jupyterfiles:/home/jovyan/work --restart=always --name jupyter-lab jupyter/datascience-notebook:latest start-notebook.sh --NotebookApp.token=$MyToken
 
-
+# new image source: https://quay.io/repository/jupyter/datascience-notebook
+docker pull quay.io/jupyter/datascience-notebook
 
 # Jupyter lab skaner
 MyToken='MyTokenHere'
