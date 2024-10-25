@@ -1,5 +1,5 @@
 # Grafana
-[docker compose](docker/docker-compose-workspace/grafana/docker-compose.yaml)
+[docker compose](docker/docker-compose-workspace/grafana-stacks/grafana/docker-compose.yaml)
 
 ## Plugins
 * /plugins/speakyourcode-button-panel
@@ -8,5 +8,4 @@
     * https://github.com/VolkovLabs/business-forms
 * /plugins/operato-windrose-panel
     * https://git.operato.eu/open-source/operato-windrose-panel
-
 
