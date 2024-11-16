@@ -1,6 +1,15 @@
 # misc
 VSC
 Github desktop
+Spotify
+
+## Time
+```
+sudo timedatectl set-timezone Europe/Warsaw
+timedatectl status
+```
+
+
 
 # docker
 
