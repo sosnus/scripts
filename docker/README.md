@@ -9,6 +9,8 @@
 ### Remove contaienr
 ```
 docker stop nginx-container
+
+docker container rm redis-container
 ```
 
 ### Run compose in background
