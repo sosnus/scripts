@@ -1,3 +1,9 @@
+# container name schematic:
+# <servicename>-container
+# to validate
+# docker run --rm --name test-redis redis:6.2-alpine redis-server --loglevel warning
+
+
 ### Port <host>:<container>
 #  --restart=always
 ### LAZYDOCKER INSTALL script ###
