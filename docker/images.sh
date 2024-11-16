@@ -24,6 +24,10 @@ docker exec -it zerotier-container /bin/bash
 # FILEBROWSER
 docker run -v /root/workspace/jenkins-workspace:/srv -d --name filebrowser-container --restart=always -p 8082:80 filebrowser/filebrowser
 
+# TELEGRAF
+# docker run --it --name telegraf-container sh telegraf:alpine
+# docker run --name telegraf-container telegraf:alpine
+
 # JAVA SPRING build and run
 docker build -t iap-back .
 docker run --name  container-iap-back -p 8081:80 -d iap-back
