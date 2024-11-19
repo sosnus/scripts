@@ -1,3 +1,4 @@
+# simplified version
 version: '3.9'
 
 services:
@@ -9,15 +10,11 @@ services:
       - "8085:80"
     volumes:
       - ${filebrowserdatapath}:/srv
-      # - ${filebrowserdatapath}:/srv/filebrowser
-      - ${filebrowserdatapath}/metadata/filebrowser.log:/filebrowser.log
-      # - ./filebrowser.db:/filebrowser.db
-      - ${filebrowserdatapath}/metadata/filebrowser.db:/filebrowser.db
     environment:
       - FILEBROWSER_ROOT=/srv/filebrowser
     command:
-      - --database
-      - /filebrowser.db
-      - --log
-      - /filebrowser.log
+      # - --database
+      # - /filebrowser.db
+      # - --log
+      # - /filebrowser.log
 networks: {}
