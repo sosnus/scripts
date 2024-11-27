@@ -24,7 +24,8 @@ docker start jenkins-container
 
 # ZEROTIER
 # more https://hub.docker.com/r/zerotier/zerotier
-docker run --name zerotier-container --rm --cap-add NET_ADMIN --device /dev/net/tun zerotier/zerotier:latest abcdefdeadbeef00
+docker run --name zerotier-container -d --rm --cap-add NET_ADMIN --device /dev/net/tun zerotier/zerotier:latest abcdefdeadbeef00 zerotier
+docker run --name zerotier-container -d --cap-add NET_ADMIN --device /dev/net/tun zerotier/zerotier:latest abcdefdeadbeef00 zerotier
 docker exec -it zerotier-container /bin/bash
 
 # FILEBROWSER
