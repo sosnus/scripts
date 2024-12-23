@@ -124,6 +124,11 @@ docker run -d -it -v /data/dockervolumes/ros/:/data --restart=always --name ros-
 
 docker exec -it ros-test bash
 
+# Jupyter SIMPLE
+docker pull quay.io/jupyter/minimal-notebook
+# docker run -d -p 10000:8888 -e JUPYTER_ENABLE_LAB=yes -e GRANT_SUDO=yes --user root -v /Users/stanislawpulawski/data/dockervolumes/jupyter:/home/jovyan/work --name jupyter-lab jupyter/datascience-notebook:latest start-notebook.sh --NotebookApp.token=''
+
+
 # JUPYTER LAB (macos)
 docker run -d -p 10000:8888 -e JUPYTER_ENABLE_LAB=yes -e GRANT_SUDO=yes --user root -v /Users/stanislawpulawski/data/dockervolumes/jupyter:/home/jovyan/work --name jupyter-lab jupyter/datascience-notebook:latest start-notebook.sh --NotebookApp.token=''
 # https://hub.docker.com/r/jupyter/datascience-notebook
