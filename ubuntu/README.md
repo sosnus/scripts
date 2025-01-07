@@ -4,7 +4,7 @@ https://github.com/Cretezy/Swap
 
 
 
-# Software
+# Software - Terminal
 
 
 ## Github Desktop
@@ -42,3 +42,24 @@ echo \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update
 ```
+
+
+# Gnome extensions
+```txt
+Extension Manager
+Search Light
+Resource Monitor
+
+```
+
+
+
+FastFetch
+Instead of neofetch, fetch
+```bash
+sudo add-apt-repository ppa:zhangsongcui3371/fastfetch
+sudo apt update
+sudo apt install fastfetch
+```
+
+# Software - APP STORE
