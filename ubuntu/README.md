@@ -43,6 +43,8 @@ echo \
 sudo apt-get update
 ```
 
+sudo apt install jackd
+
 
 # Gnome extensions
 ```txt
@@ -63,3 +65,6 @@ sudo apt install fastfetch
 ```
 
 # Software - APP STORE
+* OBS Studio
+* Extension Manager
+* Shotcut
