@@ -1,3 +1,22 @@
+# Influx-cli
+``` bash
+influx config create \
+  --config-name my-remote-config \
+  --host-url http://1.1.1.1:8086 \
+  --org <org_name> \
+  --token <api_token>
+```
+
+
+``` bash
+influx config use my-remote-config
+influx ping
+influx bucket list
+
+```
+
+
+
 # show databases
 ``` bash
 ADDR_INFLUX=sms-influxdb-container
