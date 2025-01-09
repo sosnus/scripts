@@ -5,7 +5,9 @@ https://github.com/Cretezy/Swap
 
 
 # Software - Terminal
-
+```bash
+sudo apt install tree
+```
 
 ## Github Desktop
 ```bash
