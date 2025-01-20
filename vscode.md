@@ -7,4 +7,8 @@
 * python
 * flutter
 * csv&bigdata
+    * mechatroner.rainbow-csv
+    * janisdd.vscode-edit-csv ???
 * text&markdown
+    * yzane.markdown-pdf
+    * marp-team.marp-vscode
