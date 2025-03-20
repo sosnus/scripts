@@ -5,8 +5,6 @@ pip or pip3?
 pip --version
 
 
-
-
 pip install --upgrade pip
 pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip install -U
 
@@ -22,7 +20,6 @@ sudo apt install python3.8
 <!-- sudo apt install python3.10 -->
 ```
 
-
 sudo snap remove python38
 
 
@@ -30,7 +27,5 @@ find / -name 'python*' 2>/dev/null | grep python
 
 curl -O https://bootstrap.pypa.io/get-pip.py
 python3.8 get-pip.py
-
-
 
 python3.8 -m pip install -r requirements.txt
