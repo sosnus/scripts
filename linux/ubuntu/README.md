@@ -2,6 +2,10 @@
 
 https://github.com/Cretezy/Swap
 
+# APT
+```bash
+sudo apt update && sudo apt upgrade
+```
 
 
 # Software - Terminal
@@ -75,6 +79,18 @@ sudo add-apt-repository ppa:zhangsongcui3371/fastfetch
 sudo apt update
 sudo apt install fastfetch
 ```
+
+
+### Ubuntu monitor service
+```bash
+sudo apt install htop
+sudo apt install jtop
+sudo apt install iftop
+sudo apt install nload
+sudo apt install bmon
+```
+
+
 
 # Software - APP STORE
 * OBS Studio

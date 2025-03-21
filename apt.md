@@ -1,3 +1,8 @@
+# LEGACY
+see ./linux/ubuntu/readme.md
+
+
+
 # APT
 ```bash
 sudo apt update && sudo apt upgrade
