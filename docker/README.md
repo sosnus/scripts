@@ -87,3 +87,9 @@ Attach (open sh shell)
 ``` bash
 docker attach docker_container
 ```
+
+
+## Docker flags
+
+--progress plain
+--no-cache
