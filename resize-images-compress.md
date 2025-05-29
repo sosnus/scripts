@@ -3,12 +3,27 @@ sudo apt install imagemagick
 ```
 
 ```bash
+
+mkdir -p out-compress
+
 for file in *.png; do
-    convert "$file" -resize 50% -quality 80 "${file%.png}_compress.png"
+    output_file="out-compress/${file%.png}_compress.png"
+    convert "$file" -resize 50% -quality 80 "$output_file"
+    echo "convert $file done!"
 done
 ```
 
-======
+```bash
+mkdir -p out-compress
+
+for file in *.jpg; do
+    output_file="out-compress/${file%.png}_compress.jpg"
+    convert "$file" -resize 50% -quality 80 "$output_file"
+    echo "convert $file done!"
+done
+```
+
+===
 
 
 
