@@ -1,5 +1,7 @@
 ## Basic commands
 
+* -p <host>:<container>
+
 ### How to see logs from container 
 * `docker logs -f nginx-container`
 
