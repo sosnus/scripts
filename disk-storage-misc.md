@@ -10,7 +10,8 @@ lsblk
 
 du -sh * | sort -r
 
-
+### size du important command to chceck largest
+du -ah . | sort -rh | head -n 20
 
 # show size of partitions (in bytes)
 df -h
