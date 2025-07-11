@@ -1,6 +1,71 @@
+# Bash intro
+```bash
+#!/bin/bash
+```
+
+# 📄 Bash – Przekierowywanie wyjścia do plików i konsoli
+
+W Bashu możesz **przekierowywać wyjście** poleceń na wiele sposobów:
+- do plików,
+- do konsoli,
+- jednocześnie do obu.
+
+## 🔁 Przekierowania w Bashu
+
+| Sposób                   | Opis                                                                 | Przykład                                            |
+|--------------------------|----------------------------------------------------------------------|-----------------------------------------------------|
+| `>`                      | Nadpisuje plik wyjściem stdout (standardowe wyjście)                  | `ls > plik.txt`                                     |
+| `>>`                     | Dopisuje wyjście stdout do istniejącego pliku                        | `ls >> plik.txt`                                    |
+| `2>`                     | Przekierowanie stderr (błędów)                                       | `ls nieistnieje 2> blad.txt`                        |
+| `2>>`                    | Dopisanie stderr do istniejącego pliku                               | `ls nieistnieje 2>> blad.txt`                       |
+| `&>`                     | Przekierowanie stdout i stderr do jednego pliku                      | `ls * &> wszystko.txt`                              |
+| `command | tee plik.txt` | Wyświetla na ekranie i zapisuje do pliku (nadpisuje)                 | `ls | tee plik.txt`                                 |
+| `command | tee -a plik`  | Wyświetla na ekranie i dopisuje do pliku                             | `ls | tee -a plik.txt`                              |
+| `command > /dev/null`    | Wyłącza stdout                                                       | `ls > /dev/null`                                    |
+| `command 2> /dev/null`   | Ukrywa błędy                                                         | `ls nieistnieje 2> /dev/null`                       |
+| `command &> /dev/null`   | Ukrywa wszystko (stdout + stderr)                                    | `ls nieistnieje &> /dev/null`                       |
+
+---
+
+## ✅ Przykłady praktyczne
+
+### 1. Zapis stdout do pliku
+```bash
+echo "Hello world!" > log.txt
+```
+
+### 2. Dopisanie stderr do pliku
+```bash
+ls nieistnieje 2>> errors.log
+```
+
+### 3. Zapis stdout i stderr razem
+```bash
+some_command &> full_output.log
+```
+
+### 4. Wyświetlanie na konsolę i zapisywanie do pliku
+```bash
+python3 skrypt.py | tee wynik.txt
+```
+
+### 5. Tylko stderr, bez stdout
+```bash
+command 1> /dev/null 2> error_only.log
+```
+
+---
+
+## 💡 Dodatki
+
+- `tee` jest bardzo przydatne, gdy chcesz **widzieć wynik na żywo** i jednocześnie **zapisywać go**.
+- `&>` to skrót do `1> file 2>&1` — przekierowanie stdout oraz stderr razem.
 
 
 
+
+
+# OLD
 
           || visible in terminal ||   visible in file   || existing
   Syntax  ||  StdOut  |  StdErr  ||  StdOut  |  StdErr  ||   file   
