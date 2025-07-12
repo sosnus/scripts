@@ -5,7 +5,7 @@ on:
     branches: ["main"]
 
 env:
-  IMAGE_NAME: sosnus15/<REPONAME
+  IMAGE_NAME: sosnus15/<REPONAME>
 
 jobs:
   build-and-push:
