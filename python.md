@@ -1,3 +1,6 @@
+# Python
+![Python Release Cycle](https://www.mostlypython.com/content/images/2024/03/py_release_cycle_bordered.png)
+
 # libs
 
 pip3 install opencv-python
@@ -83,3 +86,4 @@ curl -O https://bootstrap.pypa.io/get-pip.py
 python3.8 get-pip.py
 
 python3.8 -m pip install -r requirements.txt
+```
