@@ -1,3 +1,16 @@
+# Docx to md
+(word to markdown)
+
+`pandoc myfile.docx -o myfile.md`
+
+To include images:
+
+`pandoc myfile.docx -o myfile.md --extract-media=./images/`
+
+# md to pdf
+(markdown to pdf)
+`pandoc input.md -o output.pdf`
+
 # Markdown Cheatsheet
 [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
