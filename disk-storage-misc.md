@@ -7,6 +7,9 @@ lsblk -o NAME,SIZE,MOUNTPOINT,HOTPLUG,LABEL,MODEL,STATE
 lsblk
 
 
+df -h
+df -m
+
 
 du -sh * | sort -r
 
@@ -36,6 +39,8 @@ find . -type d -exec du -sh {} + | awk '$1 !~ /K/ || $1+0 >= 100 {print $0}'
 # THE BEST (add path after '/')
 du -cha --max-depth=1 / | grep -E "M|G"
 du -cha --max-depth=1 . | grep -E "M|G"
+du -cha --max-depth=1 . | grep -E "M|G" | sort -h
+(same, but sorted)
 # du -cha --max-depth=1 / | grep -E "M|G" from link below:
 https://askubuntu.com/questions/911865/no-more-disk-space-how-can-i-find-what-is-taking-up-the-space/911872#911872
 
