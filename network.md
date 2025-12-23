@@ -44,6 +44,12 @@ sudo ufw enable
 sudo ufw status
 ```
 
+### DHCP Problem
+```bash
+sudo ip addr flush dev eth01
+
+sudo dhclient -v eth01
+```
 
 ### SSH Keys for jenkins
 
