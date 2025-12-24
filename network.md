@@ -9,6 +9,16 @@ ip a
 ip -o link
 ip -o addr
 
+ip -4 addr show | grep -oP '(?<=inet\s)\d+(\.\d+){3}'
+
+ip -4 -o addr show | awk '{print $2, $4}'
+
+### all active IPv4 with colors
+ip -c -4 -o addr
+
+## all, but color
+ip -c a
+
 # NMAP
 nmap -sn 192.168.1.0/24
 <!-- nmap -sV 192.168.1.1 -->
