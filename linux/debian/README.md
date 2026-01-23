@@ -23,3 +23,28 @@ sudo systemctl daemon-reexec
 <!-- sudo systemctl unmask sleep.target suspend.target hibernate.target hybrid-sleep.target -->
 
 
+## Misc
+
+```
+apt install --no-install-recommends xorg lxde-core lightdm network-manager
+reboot
+
+
+
+apt update
+apt upgrade -y
+
+
+apt install --no-install-recommends \
+xorg lxde-core lxterminal \
+lightdm network-manager
+
+
+systemctl enable lightdm
+systemctl enable NetworkManager
+
+apt install pcmanfm firefox-esr
+
+# apt install --no-install-recommends xorg lxde-core lightdm network-manager
+# reboot
+```
