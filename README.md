@@ -68,3 +68,5 @@ remember about `tmux`!
 * better python config
 * new installer logger (like start.sh)
 * turbo config (on start select packages and programs)
+
+S10 test
