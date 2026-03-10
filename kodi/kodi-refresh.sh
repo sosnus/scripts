@@ -31,8 +31,16 @@ rm -f "$PLAYLIST_PATH"
 echo "Done."
 
 echo "Step 4: Generating fresh playlist..."
-find "$USB_PATH" -name "*.mp4" > "$PLAYLIST_PATH"
-echo "Playlist generated."
+# build a temporary list of movies then repeat the entire list 100 times
+{
+  tmp=$(mktemp)
+  find "$USB_PATH" -name "*.mp4" > "$tmp"
+  for i in $(seq 1 100); do
+    cat "$tmp"
+  done
+  rm -f "$tmp"
+} > "$PLAYLIST_PATH"
+echo "Playlist generated with the whole list repeated 100 times."
 
 echo "Step 5: Creating autostart.sh..."
 cat > "$AUTOSTART_PATH" << EOF
