@@ -34,9 +34,12 @@ echo "Step 4: Generating fresh playlist..."
 find "$USB_PATH" -name "*.mp4" > "$PLAYLIST_PATH"
 echo "Playlist generated."
 
-echo "Step 5: Starting playback in Kodi..."
-kodi-send --action="PlayMedia($PLAYLIST_PATH)"
-echo "Playback started."
+echo "Step 5: Creating autostart.sh..."
+cat > "$AUTOSTART_PATH" << EOF
+(sleep 25; kodi-send --action="PlayMedia(/storage/autoplay.m3u)") &
+EOF
+chmod +x "$AUTOSTART_PATH"
+echo "autostart.sh created."
 
 echo "Step 6: Showing playlist content:"
 cat "$PLAYLIST_PATH"
