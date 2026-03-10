@@ -1,36 +1,43 @@
 #!/bin/bash
 # kodi-setup-autoplay.sh
 # one-time setup: create autostart, remove old playlist, generate new, play in Kodi
+# improved: echo steps, show playlist content
 
-# 1️⃣ create .config folder if not exists
+USB_PATH="/var/media/sdb1-usb-Generic_Flash_Di/autoplay"
+PLAYLIST_PATH="/storage/autoplay.m3u"
+AUTOSTART_PATH="/storage/.config/autostart.sh"
+
+echo "Step 1: Ensure /storage/.config exists..."
 mkdir -p /storage/.config
+echo "Done."
 
-# 2️⃣ create autostart.sh
-cat > /storage/.config/autostart.sh << 'EOF'
+echo "Step 2: Creating autostart.sh..."
+cat > "$AUTOSTART_PATH" << EOF
 #!/bin/bash
 # autostart Kodi playlist from USB
-sleep 25
-
-# remove old playlist
-rm -f /storage/autoplay.m3u
-
-# generate new playlist from USB folder
-find /var/media/sdb1-usb-Generic_Flash_Di/autoplay -name "*.mp4" > /storage/autoplay.m3u
-
-# play playlist in Kodi
-kodi-send --action="PlayMedia(/storage/autoplay.m3u)"
+sleep 1
+echo "Autostart: removing old playlist..."
+rm -f "$PLAYLIST_PATH"
+echo "Autostart: generating new playlist from USB folder..."
+find "$USB_PATH" -name "*.mp4" > "$PLAYLIST_PATH"
+echo "Autostart: starting Kodi playback..."
+kodi-send --action="PlayMedia($PLAYLIST_PATH)"
 EOF
+chmod +x "$AUTOSTART_PATH"
+echo "autostart.sh created at $AUTOSTART_PATH"
 
-# 3️⃣ make autostart.sh executable
-chmod +x /storage/.config/autostart.sh
+echo "Step 3: Removing old playlist (if exists)..."
+rm -f "$PLAYLIST_PATH"
+echo "Done."
 
-# 4️⃣ remove old playlist just in case
-rm -f /storage/autoplay.m3u
+echo "Step 4: Generating fresh playlist..."
+find "$USB_PATH" -name "*.mp4" > "$PLAYLIST_PATH"
+echo "Playlist generated."
 
-# 5️⃣ generate fresh playlist now
-find /var/media/sdb1-usb-Generic_Flash_Di/autoplay -name "*.mp4" > /storage/autoplay.m3u
+echo "Step 5: Starting playback in Kodi..."
+kodi-send --action="PlayMedia($PLAYLIST_PATH)"
+echo "Playback started."
 
-# 6️⃣ play playlist immediately
-kodi-send --action="PlayMedia(/storage/autoplay.m3u)"
-
-echo "Autostart configured, playlist refreshed and playing now."
+echo "Step 6: Showing playlist content:"
+cat "$PLAYLIST_PATH"
+echo "Setup complete! Autostart configured for next reboot."
