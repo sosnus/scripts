@@ -44,7 +44,12 @@ echo "Playlist generated with the whole list repeated 2 times."
 
 echo "Step 5: Creating autostart.sh..."
 cat > "$AUTOSTART_PATH" << EOF
-(sleep 25; kodi-send --action="PlayMedia(/storage/autoplay.m3u)") &
+(
+sleep 25;
+kodi-send --action="PlayerControl(RepeatAll)"
+kodi-send --action="PlayMedia(/storage/autoplay.m3u)"
+) &
+
 EOF
 chmod +x "$AUTOSTART_PATH"
 echo "autostart.sh created."
