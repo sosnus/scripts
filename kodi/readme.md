@@ -1,6 +1,14 @@
 # how to use kodi autoplay in libre elec 11.0.6
 
 
+## Files location
+* refresh script:
+    * ???
+* autostart script location:
+    * ???
+* playlist script:
+    * ???
+
 ## generate playlist
 ```bash
 # remove old playlist
