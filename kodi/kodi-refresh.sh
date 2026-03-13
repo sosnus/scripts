@@ -41,6 +41,8 @@ echo "Step 4: Generating fresh playlist..."
   rm -f "$tmp"
 } > "$PLAYLIST_PATH"
 echo "Playlist generated with the whole list repeated 2 times."
+echo "Playlist created at $PLAYLIST_PATH"
+
 
 echo "Step 5: Creating autostart.sh..."
 cat > "$AUTOSTART_PATH" << EOF
