@@ -56,3 +56,20 @@
    - F7  – Update BIOS  
    - F10 – Boot Menu  
    - F12 – Network Boot (PXE)
+
+# IGEL
+Igel M340C Quad AMD GC-424CC 4x 2,4GHz 2GB RAM 4GB
+
+Igel D220 Atom
+
+## Klawisze BIOS / Boot dla IGEL – według modeli / generacji
+
+| Model / seria IGEL                  | BIOS / skrót klawisza                         | Uwagi / co robi |
+|-------------------------------------|-----------------------------------------------|------------------|
+| **IGEL D220 (UD2)**                 | `F2` → BIOS<br>`F9` → Boot Manager            | InsydeH20 BIOS; F9 pokazuje Boot Menu :contentReference[oaicite:1]{index=1} |
+| **IGEL D210 (UD2)**                 | `F2` → BIOS                                   | Phoenix MicroCore BIOS :contentReference[oaicite:2]{index=2} |
+| **IGEL D200 (UD2)**                 | `DEL` → BIOS<br>`F9` → Boot Menu              | Phoenix Award BIOS; F9 wywołuje boot menu :contentReference[oaicite:3]{index=3} |
+| **IGEL 3210 CE Compact**            | `DEL` → BIOS                                  | Phoenix Award BIOS :contentReference[oaicite:4]{index=4} |
+| **IGEL M340C (UD3)**                | `DEL` → BIOS                                  | InsydeH20 BIOS; w niektórych firmwarach UEFI :contentReference[oaicite:5]{index=5} |
+| **IGEL M350C (UD3)**                | `DEL` → BIOS / Boot Menu                      | InsydeH20 BIOS; Boot Manager / Boot From File :contentReference[oaicite:6]{index=6} |
+| **IGEL H820C (UD5)**                | `DEL` → BIOS                                  | AMI / American Megatrends BIOS :contentReference[oaicite:7]{index=7} |
