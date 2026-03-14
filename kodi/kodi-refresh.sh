@@ -47,9 +47,10 @@ echo "Playlist created at $PLAYLIST_PATH"
 echo "Step 5: Creating autostart.sh..."
 cat > "$AUTOSTART_PATH" << EOF
 (
-sleep 25;
-kodi-send --action="PlayerControl(RepeatAll)"
+sleep 20
 kodi-send --action="PlayMedia(/storage/autoplay.m3u)"
+sleep 2
+kodi-send --action="PlayerControl(RepeatAll)"
 ) &
 
 EOF
