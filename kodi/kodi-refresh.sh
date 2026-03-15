@@ -35,12 +35,12 @@ echo "Step 4: Generating fresh playlist..."
 {
   tmp=$(mktemp)
   find "$USB_PATH" -name "*.mp4" > "$tmp"
-  for i in $(seq 1 2); do
+  for i in $(seq 1 3); do
     cat "$tmp"
   done
   rm -f "$tmp"
 } > "$PLAYLIST_PATH"
-echo "Playlist generated with the whole list repeated 2 times."
+echo "Playlist generated with the whole list repeated 3 times."
 echo "Playlist created at $PLAYLIST_PATH"
 
 
