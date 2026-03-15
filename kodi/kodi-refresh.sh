@@ -3,7 +3,12 @@
 # one-time setup: create autostart, remove old playlist, generate new, play in Kodi
 # improved: echo steps, show playlist content
 
-USB_PATH="/var/media/sdb1-usb-Generic_Flash_Di/video-autoplay"
+# for d in /var/media/*/; do
+#     USB_PATH="${d}video-autoplay"
+#     break
+# done
+
+USB_PATH="$(ls -d /var/media/*/ | head -n 1)video-autoplay"
 PLAYLIST_PATH="/storage/autoplay.m3u"
 AUTOSTART_PATH="/storage/.config/autostart.sh"
 
