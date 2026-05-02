@@ -25,6 +25,25 @@ done
 
 ===
 
+## HEIC to JPG and compress
+
+```bash
+i=1
+for f in *.HEIC; do
+  printf -v name "YY%03d.jpg" "$i"
+
+  tmp=$(mktemp --suffix=.jpg)
+
+  if heif-convert "$f" "$tmp" >/dev/null 2>&1; then
+    convert "$tmp" -quality 50 "$name"
+    i=$((i+1))
+  else
+    echo "Skipping: $f"
+  fi
+
+  rm -f "$tmp"
+done
+```
 
 
 ```bash
